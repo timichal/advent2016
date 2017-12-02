@@ -1,6 +1,6 @@
 with open("day01") as file:
 	for line in file:
-		inp = line.strip().split(", ")
+		steps = line.strip().split(", ")
 
 coords = [0, 0]
 
@@ -8,7 +8,7 @@ coordslist = []
 found = False
 
 angle = 0
-for step in inp:
+for step in steps:
 	if step[0] == "R":
 		angle += 90
 	elif step[0] == "L":
