@@ -18,7 +18,7 @@ for room in rooms:
 	room_id = int(room[-10:-7])
 	room_name = room[:-11] 
 
-	most_common = Counter(''.join(room_name.split("-"))).most_common()
+	most_common = Counter(room_name.replace("-","")).most_common()
 	common_dict = defaultdict(list)
 	for key, value in most_common:
 		common_dict[value].append(key)
